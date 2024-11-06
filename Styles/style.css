@@ -19,7 +19,7 @@ body {
     color: white;
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -59,12 +59,45 @@ body {
     text-align: center;
 }
 
-.main{
+.main {
     position: relative;
     overflow: hidden;
 }
 
-.header{
+.currency {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    border: 1px white solid;
+    padding: 5px 10px;
+    height: 25px;
+    min-width: 25px;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 28px;
+    z-index: 1;
+    user-select: none;
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+.header {
     padding: 40px 0;
 }
 
@@ -314,7 +347,7 @@ body {
 }
 
 .line1 {
-   position: absolute;
+    position: absolute;
     z-index: -1;
     top: 0;
     left: calc(100% - 960px);
@@ -333,3 +366,4 @@ body {
     top: -920px;
     left: 0;
 }
+
