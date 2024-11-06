@@ -28,7 +28,14 @@ document.getElementById("change-currency").onclick = function (e) {
     } else if (currentCurrency === "₽") {
         newCurrency = "BYN";
         coefficient = 3;
+    } else if (currentCurrency === 'BYN') {
+        newCurrency = '€';
+        coefficient = 0.9;
+    } else if (currentCurrency === '€') {
+        newCurrency = '¥';
+        coefficient = 6.9;
     }
+
     e.target.innerText = newCurrency;
 
     for (let i = 0; i < prices.length; i++) {
